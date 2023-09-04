@@ -1,0 +1,2 @@
+#!/bin/bash
+find . -type f -empty -o -type d -empty -exec sh -c 'echo "${0##*/}"' {} \; | rev | awk -F/ '{print $1}' | rev
